@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndexController {
     @GetMapping("/")
     public String index(Model model) {
-        return "index";
+        return "main";
     }
 
     @GetMapping("/start")
@@ -18,7 +18,7 @@ public class IndexController {
         return "paper-create";
     }
 
-    @GetMapping("{paperPath}")
+    @GetMapping("/{paperPath}")
     public String paperHome(Model model) {
         return "paper";
     }
